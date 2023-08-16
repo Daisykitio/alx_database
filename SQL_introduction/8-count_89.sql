@@ -1,5 +1,5 @@
--- 7-insert_value.sql
+-- 8-count_89.sql
 
--- Query to insert a new row
-INSERT INTO hbtn_0c_0.first_table (id, name) VALUES (89, 'Holberton School');
+-- Query to count the number of records with id = 89
+SELECT COUNT(*) FROM hbtn_0c_0.first_table WHERE id = 89;
 
