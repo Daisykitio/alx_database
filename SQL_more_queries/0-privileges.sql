@@ -1,7 +1,8 @@
--- 0-privileges.sql
-CREATE USER 'user_0d_1'@'localhost';
-GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
+SELECT IFNULL(
+    CONCAT('User exists: ', user),
+    CONCAT('Creating user: ', 'Daisykitio')
+) AS msg FROM mysql.user WHERE user = 'Daisykitio';
 
-CREATE USER 'user_0d_2'@'localhost';
-GRANT ALL PRIVILEGES ON *.* TO 'user_0d_2'@'localhost';
+-- Only create the user if it doesn't exist
+CREATE USER IF NOT EXISTS 'Daisykitio'@'localhost';
 
